@@ -60,3 +60,7 @@ Advanced Validation: Add more complex JavaScript validation, such as ensuring a 
 New Slides: Create additional slides to cover topics like Accessibility (aria-label) or Form Submission Methods (action and method attributes).
 
 We welcome the continued development of this educational resource to make the journey into web development exciting and accessible for every young learner.
+
+
+
+To view slides: https://slidespresentation.netlify.app/
