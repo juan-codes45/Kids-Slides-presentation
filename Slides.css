@@ -1,0 +1,310 @@
+/* Slides.css - Styles for Web Forms Presentation */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Presentation Container */
+.presentation {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+}
+
+/* Slide Counter */
+.slide-counter {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Slides */
+.slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Typography */
+h1 {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #f9f9f9;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 3px dashed #3498db;
+    padding-bottom: 10px;
+    margin: 25px 0 15px;
+}
+
+h3 {
+    color: #16a085;
+    margin: 15px 0 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Hand-drawn elements */
+.hand-drawn {
+    display: inline-block;
+    background: #f1c40f;
+    padding: 8px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    transform: rotate(-2deg);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight text */
+.highlight {
+    background: #ffeaa7;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Lists */
+ul {
+    margin: 15px 0 15px 30px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+/* Code Blocks */
+.code-block {
+    background: #2d3436;
+    color: #dfe6e9;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin: 20px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border-left: 5px solid #e74c3c;
+}
+
+/* Tip Boxes */
+.tip-box {
+    background: #d5f5e3;
+    border-left: 5px solid #27ae60;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+/* Teacher Notes */
+.teacher-note {
+    background: #fef9e7;
+    border-left: 5px solid #f39c12;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Demo Areas */
+.demo-area {
+    background: #f8f9fa;
+    border: 2px dashed #bdc3c7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.demo-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.demo-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.demo-form input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.demo-form input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.demo-form button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.demo-form button:hover {
+    background: #2980b9;
+}
+
+/* Message Boxes */
+.message-box {
+    padding: 12px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-weight: bold;
+    display: none;
+}
+
+.message-box.success {
+    background: #d5f5e3;
+    color: #27ae60;
+    border-left: 5px solid #27ae60;
+}
+
+.message-box.error {
+    background: #fadbd8;
+    color: #e74c3c;
+    border-left: 5px solid #e74c3c;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .presentation {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .slide-counter {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    
+    .hand-drawn {
+        display: block;
+        margin: 10px 0;
+        transform: none;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .presentation {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .slide-counter, .navigation {
+        display: none;
+    }
+    
+    .slide {
+        display: block !important;
+        page-break-after: always;
+    }
+    
+    .demo-area {
+        border: 1px solid #ccc;
+    }
+}
